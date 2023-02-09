@@ -1,0 +1,30 @@
+.features{
+   // background-color: $color-grey-light-2;
+    grid-column: center-start /center-end;
+
+    margin: 15rem 0;
+
+    display: grid;
+
+    //grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr)); // add as many tracks as needed to fit content in the container, so if we decrease resolution to 25rem it cant feed 3 columns so it will shrink to 2 columns
+    grid-gap: 6rem;
+    align-items: start; // so the gap between items doesnt stratch, default option is stratch, so we move items to the top of the box
+   
+}
+.feature{
+    display: grid;
+    grid-template-columns: min-content 1fr;
+    grid-row-gap: 1.5rem;
+    grid-column-gap: 2.5rem;
+    &__icon{
+        fill:$color-primary;
+        width: 4.5rem;
+        grid-row: 1 / span 2;
+        height: 4.5rem;
+        transform: translateY(-1rem);
+    }
+    &__text{
+        font-size: 1.7rem;
+    }
+}
